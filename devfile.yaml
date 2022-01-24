@@ -14,17 +14,12 @@ components:
   - name: dev
     container:
       image: quay.io/che-incubator/che-code-dev:insiders
-      memoryLimit: 7Gi
-      cpuLimit: 3500m
       endpoints:
         - exposure: public
           name: dev
           secure: true
           protocol: http
           targetPort: 8000
-  - name: projects
-    volume:
-      size: 3Gi
 commands:
   - id: build
     exec:
